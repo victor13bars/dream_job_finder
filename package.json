@@ -2,7 +2,7 @@
   "name": "dream_job_finder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://victor13bars.github.io/dream_job_finder",
+  "homepage": "https://victor13bars.github.io/dream_job_finder/#",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@mantine/core": "^6.0.11",
