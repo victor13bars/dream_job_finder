@@ -1,0 +1,450 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    font-family: Inter, sans-serif;
+    background: #F5F5F5;
+    color: #232134;
+}
+
+li, a, button {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+}
+
+input, input:focus {
+    border: none;
+    outline: none;
+}
+
+.inputSalary {
+    position: relative;
+}
+
+.inputSalary::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 33%;
+    transform: translateY(-50%);
+    left: 246px;
+    background-image: url("../src/img/upArrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.inputSalary::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 67%;
+    transform: translateY(-50%);
+    left: 246px;
+    background-image: url("../src/img/downArrow.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    pointer-events: none;
+}
+
+.customInput {
+    padding: 10px 12px;
+    width: 275px;
+    background: #FFFFFF;
+    border: 1px solid #D5D6DC;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.customInput:hover {
+    border: 1px solid #5E96FC;
+}
+
+.customInput:focus {
+    border: 1px solid #5E96FC;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px 0px 24px 162px;
+    background-color: #FFFFFF
+}
+
+.nav__links {
+    margin-left: 250px;
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav__links li a {
+    line-height: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #5E96FC;
+}
+
+.active {
+    font-weight: 500;
+    color: #5E96FC;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 28px;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: 380px;
+    background-color: #FFFFFF;
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.sidebarDescription {
+    display: flex;
+    column-gap: 67px;
+}
+
+.sidebarTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.resetBtn {
+    display: flex;
+    column-gap: 4px;
+    cursor: pointer;
+}
+
+
+.resetTitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ACADB9;
+}
+
+.filters {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.filterTitle {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #232134;
+}
+
+.filterSalary {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.menuItem {
+    color: #232134
+}
+
+.menuItem:hover {
+    background: #5E96FC;
+    border-radius: 8px;
+    color: white;
+}
+
+.vacanciesWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.input {
+    background: #FFFFFF;
+    border: 1px solid #EAEBED;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 23px 0px;
+}
+
+.button {
+    background: #5E96FC;
+    border-radius: 8px;
+    padding: 6px 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+
+.returnBtn{
+    background: #DEECFF;
+    color: #3B7CD3;
+}
+
+.vacancies {
+    margin-top: 16px;
+    width: 773px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.vacancy {
+    width: 773px;
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 24px;
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+}
+
+.vacancyName {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5E96FC;
+}
+
+.currentName {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.vacancyInfo {
+    margin-top: 13px;
+    display: flex;
+}
+
+.currentInfo {
+    margin-top: 16px
+}
+
+.vacancySalary {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #232134;
+}
+
+.currentSalary {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.vacancyType {
+    line-height: 20px;
+    color: #232134;
+}
+
+.currentType {
+    font-size: 20px;
+}
+
+.vacancySeparator {
+    margin: 0px 12px;
+}
+
+.vacancyLocation {
+    margin-top: 12px;
+    display: flex;
+    column-gap: 8px;
+}
+
+.currentLocation {
+    margin-top: 16px;
+}
+
+.vacancyTown {
+    line-height: 140%;
+}
+
+.currentVacancy {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 773px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.vacancyDetails {
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #EAEBED;
+    border-radius: 12px;
+    line-height: 24px;
+}
+
+.star {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    background: url("./img/notFavorite.svg") center center/cover no-repeat;
+}
+
+.starActive {
+    background: url("./img/favorite.svg") center center/cover no-repeat;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #232134;
+}
+
+.paginationButtons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.paginationButtons li {
+    margin: 0px 4px;
+    background: #FFFFFF;
+    border: 1px solid #D5D6DC;
+    border-radius: 4px;
+}
+
+.paginationButtons a {
+    display: inline-block;
+    padding: 3px 11px;
+    cursor: pointer;
+}
+
+.pagination__active a {
+    color: white;
+    background: #5E96FC;
+    border: 1px solid #5E96FC;
+}
+
+.pagination__disabled .next__arrow {
+    background-image: url("../src/img/disabledArrow.svg");
+    transform: rotate(180deg);
+}
+
+.pagination__disabled .previous__arrow {
+    background-image: url("../src/img/disabledArrow.svg");
+    transform: rotate(0deg);
+}
+
+.arrowsPosition {
+    display: flex;
+    align-items: center;
+}
+
+.next__arrow {
+    width: 16px;
+    height: 16px;
+    background-image: url("../src/img/activeArrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+
+.previous__arrow {
+    width: 16px;
+    height: 16px;
+    background-image: url("../src/img/activeArrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transform: rotate(180deg);
+}
+
+.empty {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyDescription {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #343A40;
+}
+
+.emptyImage {
+    width: 240px;
+    height: 230px;
+}
+
+.loader {
+    margin: 0 auto;
+    margin-top: 190px;
+    border: 16px solid darkgray;
+    border-top: 16px solid #5E96FC;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
