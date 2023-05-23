@@ -65,8 +65,8 @@ export const initialState: initialStateType = {
     },
     filters: {
         catalog: null,
-        payment_from: 100,
-        payment_to: 1000000,
+        payment_from: 0,
+        payment_to: 0,
         searchValue: ""
     },
     currentVacancy: null,

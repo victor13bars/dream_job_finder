@@ -4,7 +4,7 @@ import './index.module.css';
 import App from './App';
 import {setupStore} from "./store/store";
 import {Provider} from "react-redux";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter} from "react-router-dom";
 
 export const store = setupStore()
 
@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <Provider store={store}>
             <App/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 );
 

@@ -1,4 +1,4 @@
-import React, {ReactChild, ReactChildren} from 'react';
+import React from 'react';
 import s from '../index.module.css';
 import emptyState from '../img/emptyState.svg'
 

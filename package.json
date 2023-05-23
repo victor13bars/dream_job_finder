@@ -2,6 +2,7 @@
   "name": "dream_job_finder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://victor13bars.github.io/dream_job_finder",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@mantine/core": "^6.0.11",
@@ -16,6 +17,7 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "axios": "^1.4.0",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

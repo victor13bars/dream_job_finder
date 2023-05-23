@@ -4,7 +4,7 @@ import separator from "../img/separator.svg";
 import place from "../img/place.svg";
 import Favorite from "../components/Favorite";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
-import {fetchVacancy, setCurrentVacancy} from "../store/vacancies/VacanciesSlice";
+import {fetchVacancy} from "../store/vacancies/VacanciesSlice";
 import {useParams} from "react-router-dom";
 import Loader from "../components/Loader";
 

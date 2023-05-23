@@ -4,10 +4,8 @@ import separator from '../../img/separator.svg'
 import place from '../../img/place.svg'
 import Favorite from "../../components/Favorite";
 import {NavLink} from "react-router-dom";
-import {useAppDispatch} from "../../hooks/redux";
-import {setCurrentVacancy, VacancyType} from "../../store/vacancies/VacanciesSlice";
+import {VacancyType} from "../../store/vacancies/VacanciesSlice";
 import {checkSalary} from "../../helpers/checkSalary";
-
 
 const VacancyItem: React.FC<VacancyType> = ({
                                                 id,
@@ -19,8 +17,6 @@ const VacancyItem: React.FC<VacancyType> = ({
                                                 typeWork,
                                                 town
                                             }) => {
-
-    const dispatch = useAppDispatch()
 
     return (
         <div

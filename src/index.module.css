@@ -86,7 +86,8 @@ input, input:focus {
 .header {
     display: flex;
     align-items: center;
-    padding: 24px 0px 24px 162px;
+    justify-content: center;
+    padding: 24px 0px 24px 0px;
     background-color: #FFFFFF
 }
 
@@ -127,6 +128,8 @@ input, input:focus {
 }
 
 .sidebar {
+    width: 340px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     max-height: 380px;
@@ -219,7 +222,7 @@ input, input:focus {
 }
 
 
-.returnBtn{
+.returnBtn {
     background: #DEECFF;
     color: #3B7CD3;
 }
@@ -409,6 +412,7 @@ input, input:focus {
 }
 
 .empty {
+    width: 773px;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
