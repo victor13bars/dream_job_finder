@@ -11,7 +11,7 @@ import EmptyState from "./EmptyState";
 
 export type ChangePageType = (selectedItem: { selected: number }) => void
 const Content = () => {
-
+    const token = useAppSelector(state => state.app.token)
     const vacancies = useAppSelector(state => state.vacancies.vacanciesList)
     const status = useAppSelector(state => state.app.status)
     const page = useAppSelector(state => state.vacancies.pagination.page)

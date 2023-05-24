@@ -13,6 +13,7 @@ import {setFavorites} from "./store/vacancies/VacanciesSlice";
 
 const App = () => {
 
+    const token = useAppSelector(state => state.app.token)
     const vacancies = useAppSelector(state => state.vacancies.vacanciesList)
     const catalogues = useAppSelector(state => state.vacancies.cataloguesList)
     const dispatch = useAppDispatch()

@@ -1,7 +1,8 @@
 import axios from "axios";
 import {AuthDataType} from "../types/types";
 
-const token = (JSON.parse(localStorage.getItem('tokenInfo')!)).access_token
+const token = localStorage.getItem('tokenInfo') ? (JSON.parse(localStorage.getItem('tokenInfo')!)).access_token :
+    "v3.r.137440105.860cdecdb16b3f21a30e2d26bdf4d44125f9c6c7.b115ab677de0ba9dc95e3229942c083ef3d0d7ad"
 
 export const authData: AuthDataType = {
     login: 'sergei.stralenia@gmail.com',
@@ -28,6 +29,7 @@ export const authAPI = {
     }
 }
 
+
 export const vacanciesAPI = {
     getVacancies(page: number, count: number) {
         return instance.get(`vacancies/?published=1&page=${page}&count=${count}`)
@@ -38,10 +40,8 @@ export const vacanciesAPI = {
     getCatalogues() {
         return instance.get(`catalogues/`)
     },
-    getVacancy(id:number){
+    getVacancy(id: number) {
         return instance.get(`vacancies/${id}`)
     }
 
 }
-
-// ?published=1&keyword=${word}&payment_from=0&payment_to=300000

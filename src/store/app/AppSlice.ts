@@ -7,12 +7,14 @@ export type initialStateType = {
     isLoggedIn: boolean
     status: RequestStatusType
     error: string | null
+    token: string
 }
 
 export const initialState: initialStateType = {
     isLoggedIn: false,
     status: 'idle',
-    error: null
+    error: null,
+    token: ''
 }
 export const appSlice = createSlice({
     name: 'app',
@@ -27,6 +29,9 @@ export const appSlice = createSlice({
         setError(state: initialStateType, action: PayloadAction<string | null>) {
             state.error = action.payload
         },
+        setToken(state: initialStateType, action: PayloadAction<string>) {
+            state.token = action.payload
+        },
     }
 })
 
@@ -36,6 +41,7 @@ export const login = createAsyncThunk(
         try {
             const response = await authAPI.login(authData)
             localStorage.setItem('tokenInfo', JSON.stringify(response.data))
+            dispatch(setToken(response.data.access_token))
         } catch (error: any) {
             dispatch(setError(error.message))
         }
@@ -46,7 +52,8 @@ export const login = createAsyncThunk(
 export const {
     setIsLoggedIn,
     setStatus,
-    setError
+    setError,
+    setToken
 } = appSlice.actions
 
 export default appSlice.reducer
