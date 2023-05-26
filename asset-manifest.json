@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dream_job_finder/static/css/main.194809e9.css",
-    "main.js": "/dream_job_finder/static/js/main.b9e6f68c.js",
+    "main.js": "/dream_job_finder/static/js/main.7eddc87f.js",
     "static/media/emptyState.svg": "/dream_job_finder/static/media/emptyState.e971983585ef9132b066d5ec6b8321e4.svg",
     "static/media/logo2.svg": "/dream_job_finder/static/media/logo2.82413c5cd6ee458aa95a6e87ed71f64a.svg",
     "static/media/favorite.svg": "/dream_job_finder/static/media/favorite.62bc5953b97dbc57b167.svg",
@@ -15,10 +15,10 @@
     "static/media/disabledArrow.svg": "/dream_job_finder/static/media/disabledArrow.1d6f1fd232f15efdfb07.svg",
     "static/media/activeArrow.svg": "/dream_job_finder/static/media/activeArrow.9ba94d4716c38049d23c.svg",
     "main.194809e9.css.map": "/dream_job_finder/static/css/main.194809e9.css.map",
-    "main.b9e6f68c.js.map": "/dream_job_finder/static/js/main.b9e6f68c.js.map"
+    "main.7eddc87f.js.map": "/dream_job_finder/static/js/main.7eddc87f.js.map"
   },
   "entrypoints": [
     "static/css/main.194809e9.css",
-    "static/js/main.b9e6f68c.js"
+    "static/js/main.7eddc87f.js"
   ]
 }
