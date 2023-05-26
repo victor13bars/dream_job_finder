@@ -1,9 +1,6 @@
 import axios from "axios";
 import {AuthDataType} from "../types/types";
 
-const token = localStorage.getItem('tokenInfo') ? (JSON.parse(localStorage.getItem('tokenInfo')!)).access_token :
-    "v3.r.137440105.860cdecdb16b3f21a30e2d26bdf4d44125f9c6c7.b115ab677de0ba9dc95e3229942c083ef3d0d7ad"
-
 export const authData: AuthDataType = {
     login: 'sergei.stralenia@gmail.com',
     password: 'paralect123',
@@ -18,7 +15,6 @@ const instance = axios.create({
     headers: {
         'x-secret-key': 'GEU4nvd3rej*jeh.eqp',
         'X-Api-App-Id': authData.client_secret,
-        'Authorization': `Bearer ${token}`
     }
 })
 
@@ -29,9 +25,9 @@ export const authAPI = {
     }
 }
 
-
 export const vacanciesAPI = {
     getVacancies(page: number, count: number) {
+        instance.defaults.headers.common['Authorization'] = `Bearer ${(JSON.parse(localStorage.getItem('tokenInfo')!)).access_token || ''}`
         return instance.get(`vacancies/?published=1&page=${page}&count=${count}`)
     },
     searchVacancies(word: string, catalog: number | null, payment_from: number, payment_to: number, page: number, count: number) {

@@ -1,13 +1,12 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import s from '../index.module.css';
-
-import {MantineProvider, TextInput, TextInputProps, useMantineTheme} from '@mantine/core';
+import {MantineProvider, TextInput, TextInputProps} from '@mantine/core';
 import {IconSearch} from '@tabler/icons-react';
 import Button from "./Button";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {searchVacancies, setPaginationDefault, setSearchValue} from "../store/vacancies/VacanciesSlice";
 
-export const InputWithButton = (props: TextInputProps) => {
+export const InputWithButton:React.FC = (props: TextInputProps) => {
     const text = useAppSelector(state => state.vacancies.filters.searchValue)
     const setText = (value: string) => {
         dispatch(setSearchValue(value))

@@ -9,7 +9,7 @@ import {ChangePageType} from "../components/Content";
 import Button from "../components/Button";
 import {useNavigate} from "react-router-dom";
 
-const Favorites = () => {
+const Favorites: React.FC = () => {
 
     const page = useAppSelector(state => state.vacancies.paginationFavorites.page)
     const itemCount = useAppSelector(state => state.vacancies.paginationFavorites.itemCount)
@@ -20,9 +20,9 @@ const Favorites = () => {
     const onChangeHandler: ChangePageType = ({selected}) => {
         dispatch(setFavoritesPage(selected + 1))
     }
-   const onClickHandler = () => {
+    const onClickHandler = () => {
         navigate('/')
-   }
+    }
 
     useEffect(() => {
         dispatch(setFavoritesTotal(favorites.length))

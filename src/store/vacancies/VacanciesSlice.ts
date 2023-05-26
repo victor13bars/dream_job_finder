@@ -162,7 +162,6 @@ export const vacanciesSlice = createSlice({
 export const fetchAllInfo = createAsyncThunk(
     'allInfo/fetch',
     async (_, {dispatch, getState}) => {
-
         const state = getState() as RootState
         const page = state.vacancies.pagination.page
         const itemCount = state.vacancies.pagination.itemCount
@@ -196,7 +195,6 @@ export const searchVacancies = createAsyncThunk(
 
         try {
             const response = await vacanciesAPI.searchVacancies(word, catalog, payment_from, payment_to, page, itemCount)
-            console.log('searchVacancies', response.data)
             dispatch(setVacancies(response.data.objects))
             dispatch(setTotal(response.data.total <= 500 ? response.data.total : 500))
             dispatch(setStatus('succeeded'))

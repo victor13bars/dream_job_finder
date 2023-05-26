@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import Header from "./components/Header";
-import {useAppDispatch, useAppSelector} from "./hooks/redux";
+import {useAppDispatch} from "./hooks/redux";
 import Content from "./components/Content";
-import {login} from "./store/app/AppSlice";
+import {login, setToken} from "./store/app/AppSlice";
 import {authData} from "./api/api";
 import {isTokenFresh} from "./helpers/checkToken";
 import {Route, Routes} from "react-router-dom";
@@ -13,12 +13,10 @@ import {setFavorites} from "./store/vacancies/VacanciesSlice";
 
 const App = () => {
 
-    const token = useAppSelector(state => state.app.token)
-    const vacancies = useAppSelector(state => state.vacancies.vacanciesList)
-    const catalogues = useAppSelector(state => state.vacancies.cataloguesList)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
+        dispatch(setToken(localStorage.getItem('tokenInfo') ? (JSON.parse(localStorage.getItem('tokenInfo')!)).access_token : ''))
         dispatch(setFavorites((JSON.parse(localStorage.getItem('favorites')!)) || []))
         if (!isTokenFresh()) {
             dispatch(login(authData))

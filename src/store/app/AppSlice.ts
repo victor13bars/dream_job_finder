@@ -40,14 +40,13 @@ export const login = createAsyncThunk(
     async (authData: AuthDataType, {dispatch}) => {
         try {
             const response = await authAPI.login(authData)
-            localStorage.setItem('tokenInfo', JSON.stringify(response.data))
-            dispatch(setToken(response.data.access_token))
+            localStorage.setItem('tokenInfo', JSON.stringify(response?.data))
+            dispatch(setToken(response.data?.access_token))
         } catch (error: any) {
             dispatch(setError(error.message))
         }
     }
 )
-
 
 export const {
     setIsLoggedIn,

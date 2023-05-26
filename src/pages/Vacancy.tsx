@@ -8,21 +8,20 @@ import {fetchVacancy} from "../store/vacancies/VacanciesSlice";
 import {useParams} from "react-router-dom";
 import Loader from "../components/Loader";
 
-const Vacancy = () => {
+const Vacancy: React.FC = () => {
 
     const params = useParams()
     const status = useAppSelector(state => state.app.status)
     const dispatch = useAppDispatch()
     const currentVacancy = useAppSelector(state => state.vacancies.currentVacancy)
     const professionName = useAppSelector(state => state.vacancies.currentVacancy?.professionName)
-    const companyName  = useAppSelector(state => state.vacancies.currentVacancy?.companyName)
+    const companyName = useAppSelector(state => state.vacancies.currentVacancy?.companyName)
     const paymentFrom = useAppSelector(state => state.vacancies.currentVacancy?.paymentFrom)
     const paymentTo = useAppSelector(state => state.vacancies.currentVacancy?.paymentTo)
     const currency = useAppSelector(state => state.vacancies.currentVacancy?.currency)
     const typeWork = useAppSelector(state => state.vacancies.currentVacancy?.typeWork)
     const town = useAppSelector(state => state.vacancies.currentVacancy?.town)
     const vacancyRichText = useAppSelector(state => state.vacancies.currentVacancy?.vacancyRichText)
-    console.log(params.id)
 
     useEffect(() => {
         dispatch(fetchVacancy(Number(params.id)))
@@ -50,14 +49,14 @@ const Vacancy = () => {
 
                 <Favorite
                     data={{
-                        id:Number(params.id),
-                        professionName:professionName!,
-                        companyName:companyName!,
-                        paymentFrom:paymentFrom!,
-                        paymentTo:paymentTo!,
-                        currency:currency!,
-                        typeWork:typeWork!,
-                        town:town!,
+                        id: Number(params.id),
+                        professionName: professionName!,
+                        companyName: companyName!,
+                        paymentFrom: paymentFrom!,
+                        paymentTo: paymentTo!,
+                        currency: currency!,
+                        typeWork: typeWork!,
+                        town: town!,
                     }}
                 />
             </div>

@@ -3,8 +3,7 @@ import s from '../index.module.css';
 import logo from '../img/logo2.svg'
 import {NavLink} from "react-router-dom";
 
-const Header = () => {
-    console.log()
+const Header:React.FC = () => {
     return (
         <header className={s.header}>
             <img className={s.logo} src={logo} alt="logo"/>

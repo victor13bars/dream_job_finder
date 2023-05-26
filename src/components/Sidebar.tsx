@@ -16,14 +16,13 @@ import {
 } from "../store/vacancies/VacanciesSlice";
 import CustomInput from "./CustomInput";
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
 
     const catalog = useAppSelector(state => state.vacancies.filters.catalog)
     const payment_from = useAppSelector(state => state.vacancies.filters.payment_from)
     const payment_to = useAppSelector(state => state.vacancies.filters.payment_to)
     const catalogues = useAppSelector(state => state.vacancies.cataloguesList)
-    // const [salaryFrom, setSalaryFrom] = useState(payment_from)
-    // const [salaryTo, setSalaryTo] = useState(payment_to)
+
     const setSalaryFrom = (value: number) => {
         dispatch(setPaymentFrom(value))
     }
