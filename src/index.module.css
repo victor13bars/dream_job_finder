@@ -30,6 +30,12 @@ input, input:focus {
     outline: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 0;
+    cursor: pointer;
+}
+
 .inputSalary {
     position: relative;
 }
@@ -42,7 +48,7 @@ input, input:focus {
     position: absolute;
     top: 33%;
     transform: translateY(-50%);
-    left: 246px;
+    left: 265px;
     background-image: url("../src/img/upArrow.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -58,7 +64,7 @@ input, input:focus {
     position: absolute;
     top: 67%;
     transform: translateY(-50%);
-    left: 246px;
+    left: 265px;
     background-image: url("../src/img/downArrow.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;

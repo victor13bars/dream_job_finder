@@ -27,9 +27,9 @@ const Content: React.FC = () => {
 
     useEffect(() => {
         dispatch(fetchAllInfo())
-    }, [token])
+    }, [localStorage.getItem('tokenInfo')])
 
-    if (status === 'loading' || !token) {
+    if (status === 'loading') {
         return <Loader/>
     }
 

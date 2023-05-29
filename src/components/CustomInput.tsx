@@ -6,7 +6,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type CustomInputPropsType = DefaultInputPropsType & {
     onChangeText?: (value: number) => void
     onEnter?: () => void
-    dataAttributes?:string
+    dataAttributes?: string
 };
 const CustomInput: React.FC<CustomInputPropsType> = (
     {
@@ -15,6 +15,8 @@ const CustomInput: React.FC<CustomInputPropsType> = (
         onKeyPress, onEnter,
         className,
         dataAttributes,
+        step,
+        readOnly,
         ...restProps
     }
 ) => {
@@ -28,13 +30,13 @@ const CustomInput: React.FC<CustomInputPropsType> = (
         <div className={s.inputSalary}>
             <input
                 data-elem={dataAttributes}
-                type={"text"}
+                type={"number"}
                 onChange={onChangeCallback}
                 className={className}
-
+                step={step}
+                readOnly={readOnly}
                 {...restProps}
             />
-
         </div>
     );
 };

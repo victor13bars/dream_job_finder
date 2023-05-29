@@ -72,6 +72,8 @@ const Sidebar: React.FC = () => {
                         value={payment_from > 0 ? payment_from : ''}
                         placeholder={'От'}
                         onChangeText={setSalaryFrom}
+                        step={'5000'}
+                        readOnly={false}
                     />
                     <CustomInput
                         dataAttributes={"salary-to-input"}
@@ -79,6 +81,8 @@ const Sidebar: React.FC = () => {
                         value={payment_to > 0 ? payment_to : ''}
                         placeholder={'До'}
                         onChangeText={setSalaryTo}
+                        step={'5000'}
+                        readOnly={false}
                     />
                 </div>
                 <Button
